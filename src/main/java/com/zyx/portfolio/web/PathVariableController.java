@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.zyx.protfolio.demos.web;
+package com.zyx.portfolio.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

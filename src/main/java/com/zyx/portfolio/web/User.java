@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.zyx.protfolio.demos.web;
+package com.zyx.portfolio.web;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
