@@ -2,16 +2,38 @@ spring:
   cache:
     type: simple
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password:
-
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
-    h2:
-      console:
-        enabled: true
+# Massive.com API 配置
+massive:
+  api:
+    key: ${MASSIVE_API_KEY:dl4Jwr7pavsEBjdYnZJN3COos3DTkhfT}
+    url: ${MASSIVE_API_URL:https://api.massive.com/v1}
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+
+# 日志配置
+logging:
+  level:
+    com.zyx.portfolio: INFO
+    org.springframework.web: INFO
